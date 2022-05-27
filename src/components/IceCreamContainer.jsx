@@ -1,25 +1,25 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { buyCake } from "../store";
+import { buyIceCream } from "../store";
 
-const CakeContainerHooks = () => {
+const IceCreamContainer = () => {
   const dispatch = useDispatch();
   /* to get data in initial State */
-  const capung = useSelector((state) => state.cake.numOfCakes);
+  const lele = useSelector((state) => state.iceCream.numOfIceCreams);
   return (
     <>
       <div>
-        <h2>Number of Cakes - {capung}</h2>
+        <h2>Number of Ice Creams - {lele}</h2>
         <button
           onClick={() => {
-            dispatch(buyCake());
+            dispatch(buyIceCream());
           }}
         >
-          Buy Cake
+          Buy Ice Cream
         </button>
       </div>
     </>
   );
 };
 
-export default CakeContainerHooks;
+export default IceCreamContainer;
